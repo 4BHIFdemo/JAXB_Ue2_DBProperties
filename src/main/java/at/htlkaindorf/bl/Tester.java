@@ -24,6 +24,7 @@ public final class Tester {
             List<Student> students = CSV_IO.readStudentCSV(FILE_STUDENTS_CSV);
             System.out.println("Read students from CSV file " + FILE_STUDENTS_CSV.getName() + ":");
             students.stream().map(student -> "\t" + student).forEach(System.out::println);
+/*
 
             System.out.println("Deleting old students from database...");
             DBAccess.getInstance().deleteAllStudents();
@@ -33,11 +34,13 @@ public final class Tester {
             System.out.println("Read students from DB:");
             DBAccess.getInstance().getStudents().stream().map(student -> "\t" + student).forEach(System.out::println);
 
+*/
             System.out.println("Writing students to XML file " + FILE_STUDENTS_XML.getName() + ": ");
-            XML_IO.writeStudents(DBAccess.getInstance().getStudents(), FILE_STUDENTS_XML);
+            //XML_IO.writeStudents(DBAccess.getInstance().getStudents(), FILE_STUDENTS_XML);
+            XML_IO.writeStudents(students, FILE_STUDENTS_XML);
             System.out.println("Read students from XML file " + FILE_STUDENTS_XML.getName() + ": ");
             XML_IO.readStudents(FILE_STUDENTS_XML).stream().map(student -> "\t" + student).forEach(System.out::println);
-        }catch(IOException|SQLException|JAXBException e) {
+        }catch(IOException/*|SQLException*/|JAXBException e) {
             e.printStackTrace();
         }
     }

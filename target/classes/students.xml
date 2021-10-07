@@ -71,5 +71,20 @@
                 </exam>
             </exams>
         </student>
+        <student>
+            <name>D</name>
+            <dateOfBirth>01.03.2012</dateOfBirth>
+            <exams>
+                <exam>
+                    <mark>1</mark>
+                    <name>POS</name>
+                </exam>
+            </exams>
+        </student>
+        <student>
+            <name>E</name>
+            <dateOfBirth>01.01.2000</dateOfBirth>
+            <exams/>
+        </student>
     </students>
 </students>
