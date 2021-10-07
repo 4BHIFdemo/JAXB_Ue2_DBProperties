@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dbProperties>
+    <driverClassName>org.postgresql.Driver</driverClassName>
+    <password>postgres</password>
+    <url>jdbc:postgresql://localhost:5432/ue2_db_properties</url>
+    <username>postgres</username>
+</dbProperties>
